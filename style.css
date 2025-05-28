@@ -15,7 +15,7 @@ body {
 
 #game-container {
   border: 2px solid #333;
-  background: #87ceeb; /* Gökyüzü rengi */
+  background: #87ceeb;
   position: relative;
 }
 
