@@ -1,10 +1,25 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+* {
+  box-sizing: border-box;
+  padding: 0; margin: 0;
+  user-select: none;
 }
 
-#map {
+body {
+  background: #cceeff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  width: 100vw;
+  font-family: Arial, sans-serif;
+}
+
+#game-container {
+  border: 2px solid #333;
+  background: #87ceeb; /* Gökyüzü rengi */
+  position: relative;
+}
+
+canvas {
+  background: #f0f0f0;
+  display: block;
 }
