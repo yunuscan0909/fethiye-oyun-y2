@@ -1,7 +1,7 @@
 const map = L.map('map').setView([36.6512, 29.1236], 15);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '� OpenStreetMap',
+  attribution: '© OpenStreetMap',
 }).addTo(map);
 
 const carIcon = L.icon({
@@ -17,6 +17,24 @@ document.addEventListener('keydown', function (e) {
   let lat = pos.lat;
   let lng = pos.lng;
   const step = 0.0005;
+// Leaflet haritayı başlat
+const map = L.map('map').setView([36.6512, 29.1239], 15); // Fethiye koordinatları
+
+// Harita katmanı (OpenStreetMap)
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+// Arabanın başlangıç noktası
+let carLat = 36.6512;
+let carLng = 29.1239;
+
+// Haritada araba ikonu oluştur (şimdilik bir marker)
+const carIcon = L.icon({
+  iconUrl: 'car-icon.png',
+  iconSize: [32, 32]
+});
+const carMarker = L.marker([carLat, carLng], { icon: carIcon }).addTo(map);
 
   if (e.key === 'ArrowUp') lat += step;
   if (e.key === 'ArrowDown') lat -= step;
