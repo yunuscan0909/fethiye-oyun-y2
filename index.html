@@ -1,44 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-  <title>Fethiye Araba Oyunu</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fethiye Şehir Oyunu</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="map"></div>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Fethiye Oyun</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <style>
-    html, body, #map {
-      height: 100%;
-      margin: 0;
-    }
+<div id="game-container">
+  <canvas id="gameCanvas" width="600" height="400"></canvas>
+</div>
 
-    #car {
-      position: absolute;
-      width: 32px;
-      height: 32px;
-      background: url('car-icon.png') no-repeat center center;
-      background-size: contain;
-      pointer-events: none;
-    }
-  </style>
-</head>
-<body>
-  <div id="map"></div>
-  <div id="car"></div>
-
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
